@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- Make site responsive on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homework Finder</title>
+  <!-- Link to the stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page header -->
+  <header class="site-header">
+    <h1>Homework Finder</h1>
+    <p class="tagline">Search and filter your homework and resources quickly.</p>
+  </header>
+
+  <!-- Search and controls -->
+  <section class="controls">
+    <!-- Simple search box -->
+    <input id="search" type="search" placeholder="Search by title, subject, or description" />
+
+    <!-- Category filter buttons -->
+    <div id="categories" class="categories">
+      <button data-subject="all" class="active">All</button>
+      <button data-subject="Math">Math</button>
+      <button data-subject="Science">Science</button>
+      <button data-subject="English">English</button>
+      <button data-subject="History">History</button>
+    </div>
+
+    <!-- Optional: Add a small form to let students add items (local only) -->
+    <form id="addForm" class="add-form" aria-label="Add homework">
+      <input id="title" type="text" placeholder="Title" required />
+      <input id="subject" type="text" placeholder="Subject (e.g. Math)" required />
+      <input id="due" type="date" />
+      <input id="link" type="url" placeholder="Optional resource link (https://...)" />
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <!-- Area where search results / homework items will show -->
+  <main id="results" class="results" aria-live="polite">
+    <!-- JavaScript will render items here -->
+  </main>
+
+  <!-- Small footer -->
+  <footer class="site-footer">
+    <small>Built for students • Works on mobile and desktop</small>
+  </footer>
+
+  <!-- Link to the JavaScript file (defer so the DOM is ready) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
